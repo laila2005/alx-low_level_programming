@@ -17,7 +17,8 @@ putchar(letterS);
 
 for (letterC = 'A'; letterC <= 'Z'; letterC++)
 {
-putchar(letterC);                                                                                      }
+putchar(letterC);
+}
 putchar('\n');
 
 return (0); }
