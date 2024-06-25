@@ -1,14 +1,23 @@
+#include "main.h"
 #include <stdio.h>
 
-
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * times_table - Prints the 9 times table from 0 to 9.
  */
 
-int main(void)
+void times_table(void)
 {
-times_table();
-return (0); }
+int i, j;
+
+for (i = 0; i <= 9; i++)
+{
+for (j = 0; j <= 9; j++)
+{
+if (j == 0)
+printf("%2d", i * j);
+else
+printf(", %2d", i * j);
+}
+printf("$\n");
+}
+}
