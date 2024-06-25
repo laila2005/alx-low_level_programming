@@ -1,8 +1,14 @@
 #include <stdio.h>
+
 /**
- * main - check the code.
+ * _isalpha - checks for alphabetic character
+ * @c: the character to check
  *
- * Return: Always 0.
+ * Description: This function checks if the input character `c` is an
+ * alphabetic character. It returns 1 if `c` is a letter, either lowercase
+ * or uppercase, and 0 otherwise.
+ *
+ * Return: 1 if `c` is an alphabetic character, 0 otherwise
  */
 
 int _isalpha(int c)
@@ -16,18 +22,3 @@ else
 return(0);
 }
 }
-
-int main(void)
-{
-    int r;
-
-r = _isalpha('H');
-putchar(r + '0');
-r = _isalpha('o');
-putchar(r + '0');
-r = _isalpha(108);
-putchar(r + '0');
-r = _isalpha(';');
-putchar(r + '0');
-putchar('\n');
-return (0); }
