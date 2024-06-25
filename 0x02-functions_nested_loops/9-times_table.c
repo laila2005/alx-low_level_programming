@@ -16,7 +16,8 @@ for (j = 0; j <= 9; j++)
 if (j == 0)
 printf("%2d", i * j);
 else
-printf(", %2d", i * j);
+printf(" ,%2d", i * j);
 }
+printf("\n");
 } 
 }
