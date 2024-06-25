@@ -18,6 +18,6 @@ printf("%2d", i * j);
 else
 printf(", %2d", i * j);
 }
-printf("$\n");
+printf("\n");
 }
 }
