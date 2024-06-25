@@ -1,4 +1,10 @@
-#include <stdio.h>
+#include "main.h"
+
+/**
+ * print_alphabet - Make the alphabet
+ *
+o * Return:void
+ */
 
 void print_alphabet(void)
 {
@@ -6,12 +12,6 @@ int i;
 
 for (i=0; i<26; i++)
 {
-putchar("abcdefghijklmnopqrstuvwxyz"[i]);
+_putchar("abcdefghijklmnopqrstuvwxyz"[i]);
 }
-putchar('\n');
-}
-
-int main(void)
-{
-print_alphabet();
-return (0); }
+_putchar('\n'); }
