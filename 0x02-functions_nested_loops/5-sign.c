@@ -1,9 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - check the code.
+ * print_sign - prints the sign of a number
+ * @n: the number to check
  *
- * Return: Always 0.
+ * Description: This function prints the sign of the input number `n`.
+ * It prints '+' if `n` is greater than 0, '0' if `n` is 0, and '-' if `n`
+ * is less than 0. The function returns 1 if `n` is positive, 0 if `n` is zero,
+ * and -1 if `n` is negative.
+ *
+ * Return: 1 if `n` is positive, 0 if `n` is zero, -1 if `n` is negative
  */
 
 int print_sign(int n)
@@ -21,29 +27,3 @@ if (n < 0)
 putchar('-');
 return(-1); }
 return(0); }
-
-int main(void)
-{
-    int r;
-
-r = print_sign(98);
-putchar(',');
-putchar(' ');
-putchar(r + '0');
-putchar('\n');
-r = print_sign(0);
-putchar(',');
-putchar(' ');
-putchar(r + '0');
-putchar('\n');
-r = print_sign(0xff);
-putchar(',');
-putchar(' ');
-putchar(r + '0');
-putchar('\n');
-r = print_sign(-1);
-putchar(',');
-putchar(' ');
-putchar(r + '0');
-putchar('\n');
-return (0); }
