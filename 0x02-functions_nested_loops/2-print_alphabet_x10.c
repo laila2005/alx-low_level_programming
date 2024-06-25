@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - check the code.
@@ -14,13 +14,8 @@ for (i = 0; i < 10; i++)
 {
 for (j = 0; j < 26; j++)
 {
-putchar("abcdefghijklmnopqrstuvwxyz"[j]);
+_putchar("abcdefghijklmnopqrstuvwxyz"[j]);
 }
-putchar('\n');
+_putchar('\n');
 }
 }
-
-int main(void)
-{
-print_alphabet_x10();
-return (0); }
