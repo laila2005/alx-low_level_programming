@@ -3,7 +3,6 @@
 
 /*
  * Function: add
- * ----------------------------
  *   Adds two integers and returns the result.
  *
  *   a: The first integer to be added.
@@ -12,5 +11,6 @@
  *   returns: The sum of the two input integers.
  */
 
-int add(int a, int b) {
-return a + b; }
+int add(int a, int b)
+{
+return (a + b); }
