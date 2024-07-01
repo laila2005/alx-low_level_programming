@@ -3,23 +3,24 @@
 #include <stdio.h>
 
 /**
- * _atoi - Converts a string to an integer.
- * @s: Pointer to the string to be converted.
- *
- * Return: The converted integer.
- */
+* _atoi - Converts a string to an integer.
+* @s: Pointer to the string to be converted.
+*
+* Return: The converted integer.
+*/
 
 int _atoi(char *s)
 {
 int sign = 1;
-int result = 0;
 int i = 0;
+int j = 0;
+char result[100];
 
 while (s[i] == ' ')
 {
 i++;
 }
-while (s[i] == '-' || s[i] == '+' || s[i] == ' ')
+while (s[i] == '-' || s[i] == '+')
 {
 if (s[i] == '-')
 {
@@ -27,19 +28,22 @@ sign = -sign;
 }
 i++;
 }
-while (s[i] >= '0' && s[i] <= '9')
+while (s[i] != '\0')
 {
-if (result > INT_MAX / 10 || (result == INT_MAX / 10 
-&& (s[i] - '0') > INT_MAX % 10))
+if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
 {
-return ((sign == 1) ? INT_MAX : INT_MIN);
+result[j++] = s[i++];
 }
-result = result * 10 + (s[i] - '0');
+else if ((s[i] >= '0' && s[i] <= '9') || s[i] == '-' || s[i] == '+' || s[i] == ' ')
+{
+result[j++] = s[i++];
+}
+else
+{
 i++;
 }
-if (s[i] != '\0')
-{
-return (result *sign);
 }
-return (result *sign);
+result[j] = '\0';
+printf("%s\n", result);
+return (0);
 }
