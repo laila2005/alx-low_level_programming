@@ -22,9 +22,13 @@ i++;
 }
 while (s[i] == '-' || s[i] == '+')
 {
-if (s[i] == '-')
+if (s[i] == '-' && sign == -1)
 {
-sign = (-sign *sign);
+sign = 1;
+}
+else 
+{
+sign = -1;
 }
 i++;
 }
