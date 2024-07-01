@@ -26,7 +26,7 @@ if (s[i] == '-' && sign == -1)
 {
 sign = 1;
 }
-else 
+else
 {
 sign = -1;
 }
