@@ -24,7 +24,7 @@ while (s[i] == '-' || s[i] == '+')
 {
 if (s[i] == '-')
 {
-sign = (-sign * sign);
+sign = (-sign *sign);
 }
 i++;
 }
