@@ -24,7 +24,7 @@ while (s[i] == '-' || s[i] == '+')
 {
 if (s[i] == '-')
 {
-sign = -sign;
+sign = (-sign * sign);
 }
 i++;
 }
@@ -42,6 +42,7 @@ result = result * 10 + (s[i] - '0');
 }
 else if (started)
 {
+sign = 1;
 break;
 }
 i++;
