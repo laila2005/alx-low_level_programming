@@ -1,30 +1,29 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* _strncpy - Concatenates at most n bytes from src string to dest string
-* @dest: The destination string to which the src string will be appended
-* @src: The source string to be appended to the dest string
-* @n: The maximum number of bytes to be appended from src
+* _strncpy - Copies at most n bytes from src string to dest string
+* @dest: The destination string to which the src string will be copied
+* @src: The source string to be copied to the dest string
+* @n: The maximum number of bytes to be copied from src
 *
-* Description: This function appends at most n bytes from the src string to the
-* dest string, overwriting the terminating null byte (\0) at the end of dest,
-* and then adds a terminating null byte. If src contains
-* n or more bytes, it does
-* not need to be null-terminated.The function returns a pointer to
-* string dest. Ensure that dest has enough space to hold the result of the
-* concatenation to avoid buffer overflow.
+* Description: This function copies at most n bytes from the src string to the
+* dest string. If src contains less than n bytes, the rest of dest will be
+* padded with null bytes. If src contains n or more bytes, dest will not be
+* null-terminated.
 *
 * Return: A pointer to the resulting string dest.
 */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-char *dest_end = dest;
-while (n > 0 && *src != '\0')
+int i;
+
+for (i = 0; i < n && src[i] != '\0'; i++)
 {
-*dest_end = *src;
-dest_end++;
-src++;
-n--;
+dest[i] = src[i];
 }
-*dest_end = '\0';
+for (; i < n; i++)
+{
+dest[i] = '\0';
+}
 return (dest); }
