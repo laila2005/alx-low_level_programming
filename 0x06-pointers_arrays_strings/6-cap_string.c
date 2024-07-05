@@ -8,7 +8,7 @@
 */
 int is_lowercase(char c)
 {
-return (c >= 'a' && c <= 'z');
+return ((c >= 'a' && c <= 'z'));
 }
 
 /**
@@ -25,9 +25,9 @@ int i;
 for (i = 0; separators[i] != '\0'; i++)
 {
 if (c == separators[i])
-return 1;
+return (1);
 }
-return 0;
+return (0);
 }
 
 /**
