@@ -6,11 +6,11 @@
  * @c: The character to locate.
  *
  * Description: This function locates the first occurrence of the character
- *              `c` in the string `s`. If the character is found, a pointer
- *              to the first occurrence is returned. If the character is
- *              not found, NULL is returned.
+ * `c` in the string `s`. If the character is found, a pointer
+ * to the first occurrence is returned. If the character is
+ * not found, NULL is returned.
  * Return: A pointer to the first occurrence of the character `c` in the
- *         string `s`, or NULL if the character is not found.
+ * string `s`, or NULL if the character is not found.
  */
 
 char *_strchr(char *s, char c)
