@@ -12,8 +12,11 @@
 *
 * Return: 1 if the string is a palindrome, 0 otherwise
 */
-int _is_palindrome_helper(char *s, int left, int right) {
-if (left >= right) {
+
+int _is_palindrome_helper(char *s, int left, int right)
+{
+if (left >= right)
+{
 return (1);
 }
 if (s[left] != s[right])
@@ -32,6 +35,7 @@ return (_is_palindrome_helper(s, left + 1, right - 1));
 *
 * Return: 1 if the string is a palindrome, 0 otherwise
 */
+
 int is_palindrome(char *s)
 {
 int length = strlen(s);
