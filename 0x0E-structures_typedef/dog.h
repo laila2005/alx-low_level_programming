@@ -1,5 +1,5 @@
-#ifndef MYHEADER_H
-#define MYHEADER_H
+#ifndef DOG_H
+#define DOG_H
 #include <stdio.h>
 
 /**
