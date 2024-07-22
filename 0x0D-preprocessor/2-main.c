@@ -1,15 +1,25 @@
 #include <stdlib.h>
-	
+
 #ifndef MAIN_H
 #define MAIN_H
 int _putchar(char c);
 #endif /* MAIN_H */
 
+/**
+ * main - Custom main function
+ *
+ * Description: This function prints the name of the
+ * file it was compiled from, followed by a new line.
+ *
+ * Return: On success, returns the character written. On error, returns -1.
+ */
+
 int main(void)
 {
-char* filename = __FILE__;
+char *filename = __FILE__;
 size_t len = 0;
-long unsigned int i;
+unsigned long int i;
+
 while (filename[len] != '\0')
 {
 len++;
