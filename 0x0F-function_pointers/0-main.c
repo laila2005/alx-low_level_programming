@@ -49,8 +49,4 @@ int main(void)
     print_name("Bob Dylan", print_name_uppercase);
     printf("\n");
     return (0);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ea99ba63c4444897449f2e37c54071f260f0124a
