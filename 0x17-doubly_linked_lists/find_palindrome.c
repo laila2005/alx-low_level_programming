@@ -27,7 +27,7 @@ return (original == reversed);
 *
 * Return: The largest palindromic number.
 */
-int find_largest_palindrome()
+int find_largest_palindrome(void)
 {
 int max_palindrome = 0;
 int i, j, product;
@@ -44,7 +44,7 @@ max_palindrome = product;
 }
 }
 
-return max_palindrome;
+return (max_palindrome);
 }
 
 /**
@@ -65,9 +65,9 @@ fprintf(file, "%d", result);
 fclose(file);
 }
 
-int main()
+int main(void)
 {
 int largest_palindrome = find_largest_palindrome();
 save_result("102-result", largest_palindrome);
-return 0;
+return (0);
 }
