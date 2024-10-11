@@ -1,32 +1,29 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - Frees the memory allocated for a hash table.
- * @ht: Pointer to the hash table.
+ * main - Test the hash_table_create function
+ *
+ * Return: Always 0.
  */
-void hash_table_delete(hash_table_t *ht)
+int main(void)
 {
-    hash_node_t *node, *tmp;
-    unsigned long int i;
+    hash_table_t *ht;
+    unsigned long int size = 1024;
+
+    ht = hash_table_create(size);
 
     if (ht == NULL)
-        return;
-
-    for (i = 0; i < ht->size; i++)
     {
-        node = ht->array[i];
-
-        while (node)
-        {
-            tmp = node->next;
-            free(node->key);
-            free(node->value);
-            free(node);
-            node = tmp;
-        }
+        printf("Error: Hash table creation failed\n");
+        return (1);
     }
+
+    printf("Hash table successfully created with size: %lu\n", ht->size);
 
     free(ht->array);
     free(ht);
+
+    return (0);
 }
