@@ -31,6 +31,7 @@ hash_node_t **array;
 
 /*PROTOTYPE*/
 hash_table_t *hash_table_create(unsigned long int size);
-
-
+unsigned long int hash_djb2(const unsigned char *str);  /* Declare hash_djb2 */
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+hash_node_t *hash_node_create(const char *key, const char *value);
 #endif
