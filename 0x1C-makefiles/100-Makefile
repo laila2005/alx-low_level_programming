@@ -1,25 +1,35 @@
+# Variables
 CC = gcc
-SRC = main.c school.c
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
 NAME = school
+RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+# Default rule to build the executable
 all: $(NAME)
 
-$(NAME): $(SRC:.c=.o)
-	$(CC) $^ -o $@
+# Rule to build the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-%.o: %.c m.h
-	$(CC) $(CFLAGS) -c $< -o $@
-
+# Rule to clean Emacs, Vim temporary files and the executable
 clean:
-	$(RM) $(NAME) *~ $(SRC:.c=.o)
+	$(RM) $(NAME) $(wildcard *~ \#*\# .*.swp)
 
+# Rule to delete object files
 oclean:
-	$(RM) $(SRC:.c=.o)
+	$(RM) $(OBJ)
 
-fclean: clean
-	$(RM) $(NAME)
+# Rule to delete everything (Emacs/Vim files, executable, and object files)
+fclean: clean oclean
 
+# Rule to force recompilation of all source files
 re: fclean all
 
-.PHONY: all clean oclean fclean re
+# Prevent compilation if m.h is missing
+$(OBJ): $(SRC)
+	if ! [ -f m.h ]; then \
+		echo "m.h is missing"; \
+		exit 1; \
+	fi
