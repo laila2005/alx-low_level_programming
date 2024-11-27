@@ -27,7 +27,7 @@ fclean: clean oclean
 # Rule to force recompilation of all source files
 re: fclean all
 
-# Prevent compilation if m.h is missing
+# Ensure compilation does not happen if m.h is missing
 $(OBJ): $(SRC)
 	if ! [ -f m.h ]; then \
 		echo "m.h is missing"; \
